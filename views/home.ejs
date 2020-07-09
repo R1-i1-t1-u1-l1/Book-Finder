@@ -1,0 +1,32 @@
+<%- include('partials/header') %>
+
+<div class="container">
+  <div class="row">
+    <div  class="col-md-2 text-center mt-5 ">
+
+    </div>
+
+    <div  class="heading col-md-8 text-center mt-5">
+        <img src="img/logo.png" width="200" height="200">
+        <!-- <i class="fa fa-book" aria-hidden="true"></i> -->
+        <h1 class="text-center mt-5"><img src="img/book.png" width="100" height="100">Book Finder</h1>
+    </div>
+
+    <form  action="/" method="post">
+      <div id="input" class="input-group mx-auto col-lg-6 col-md-5 col-sm-12">
+        <input id="search-box" type="text" name="book_name" placeholder="Enter the book name....." class="form-control" size="500" autocomplete="off">
+        <button type="submit" name="button" class="btn btn-primary">Search</button>
+      </div>
+    </form>
+
+  </div>
+</div>
+
+<div class="container">
+
+</div>
+
+
+
+
+<%- include('partials/footer') %>

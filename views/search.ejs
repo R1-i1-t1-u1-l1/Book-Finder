@@ -1,0 +1,28 @@
+<%- include('partials/header') %>
+
+ <h2>Total number of books found: <%= data.items.length %></h2>
+<% for(var i=0;i<data.items.length;i++){ %>
+      <div class="row">
+            <div class="card col-md-3" style="width: 18rem;">
+              <% if(data.items[i].volumeInfo.imageLinks != null){ %>
+                <% var img_url = data.items[i].volumeInfo.imageLinks.smallThumbnail %>
+                <img src="<%= img_url %>"/>
+              <% } %>
+
+              <div class="card-body">
+                <h4>Title : <%= data.items[i].volumeInfo.title %></h4>
+                <h4>Author : <%= data.items[i].volumeInfo.authors %></h4>
+                <h5>Click on the link for more details:<a href="<%= data.items[i].volumeInfo.previewLink %>" class="stretched-link btn btn-primary"> Link </a></h5>
+              </div>
+            </div>
+      </div>
+
+
+
+    </div>
+
+
+
+<% } %>
+
+<%- include('partials/footer') %>
